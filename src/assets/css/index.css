@@ -1,0 +1,390 @@
+.mr-4 {
+    margin-right: 20px!important;
+}
+
+.mr-3 {
+    margin-right: 5px!important;
+}
+
+.google-input-home {
+    position: relative;
+    height: 50px;
+    width: 75%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0 45px;
+    border-radius: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-input-home input {
+    height: 90%;
+    width: 100%;
+    border: none;
+    font-family: 'roboto';
+}
+
+.google-input-home .icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.google-input-home .search-icons {
+    left: 3%;
+    color: #888;
+    margin-top: 2px;
+}
+
+.google-input-home .microphone-icons {
+    right: 3%;
+}
+
+*:focus {
+    outline: none;
+}
+
+.google-button-group__home button {
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    background-color: #f2f2f2;
+    border: none;
+    margin: 0 10px;
+    height: 40px;
+    padding: 0 16px;
+    color: #5F6368;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-dialog {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.custom-dialog .custom-dialog-content {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 300px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px 1px #eee;
+    background: #fff;
+    z-index: 999;
+    padding: 10px 5px;
+}
+
+.custom-dialog.dialog-show {
+    display: flex;
+}
+
+.custom-dialog-overlay {
+    position: absolute;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.google-item {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.google-item img {
+    height: 50px;
+    width: 50px;
+}
+
+.google-item span {
+    margin-top: 5px;
+    color: #666;
+}
+
+.dialogbtn {
+    position: relative;
+    z-index: 999;
+}
+
+.list-autocomplete {
+    position: relative;
+    z-index: 999;
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px 1px #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end!important;
+    margin-left: 0;
+    padding: 0;
+    height: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.list-autocomplete li {
+    height: 20px;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.list-autocomplete li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'roboto';
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: flex-start;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 100%;
+}
+
+.list-autocomplete li a svg {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.focusable {
+    background-color: #eee;
+}
+
+.input-focus {
+    box-shadow: 0 0 5px 1px #ccc;
+}
+
+.icon-disabled {
+    color: #ccc!important;
+    cursor: default!important;
+}
+
+.google-voice-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(53, 54, 58);
+    cursor: default;
+}
+
+.google-voice-container .google-voice-icon-bar {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+}
+
+.google-voice-container .google-voice-icon-bar .google-voice-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    height: 160px;
+    width: 160px;
+    background: rgb(53, 54, 57);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3), 0 4px 8px 3px rgba(0, 0, 0, .15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.google-voice-container .google-voice-icon-bar .google-voice-icon svg {
+    color: #fff;
+    font-size: 60px;
+}
+
+.google-voice-container .google-voice-icon-bar .google-voice-overlay {
+    animation: .5s infinite animationVoiceAssistant;
+    background: rgba(218, 220, 224, 0.507);
+    border-radius: 50%;
+}
+
+@keyframes animationVoiceAssistant {
+    0% {
+        height: 160px;
+        width: 160px;
+    }
+    20% {
+        height: 200px;
+        width: 200px;
+    }
+    40% {
+        height: 170px;
+        width: 170px;
+    }
+    60% {
+        height: 175px;
+        width: 175px;
+    }
+    80% {
+        height: 165px;
+        width: 165px;
+    }
+    100% {
+        height: 160px;
+        width: 160px;
+    }
+}
+
+.voice-active {
+    background: rgb(223, 128, 119)!important;
+}
+
+.text-result {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    color: #666;
+    letter-spacing: 5px!important;
+    animation: 1s ease TextAnimateGoogleVoice;
+}
+
+@keyframes TextAnimateGoogleVoice {
+    0% {
+        left: 25%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+
+@media(max-width:500px) {
+    .nav-text {
+        display: none!important;
+    }
+    .Avatar-sec {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .custom-dialog .custom-dialog-content {
+        left: 5%;
+    }
+    .google-image {
+        width: 200px!important;
+    }
+    .dialogbtn {
+        margin-right: auto!important;
+    }
+}
+
+@media(max-width: 900px) {
+    .text-result {
+        font-size: 11px!important;
+        width: 110px;
+    }
+    .google-voice-container .google-voice-icon-bar {
+        height: 120px;
+        width: 120px;
+    }
+    .google-voice-container .google-voice-icon-bar .google-voice-icon {
+        height: 70px;
+        width: 70px;
+    }
+    .google-voice-container .google-voice-icon-bar .google-voice-icon svg {
+        font-size: 25px;
+    }
+    .google-voice-container {
+        width: 100%;
+    }
+    .google-voice-container .google-voice-icon-bar .google-voice-overlay {
+        animation: 1s ease TextAnimationGoogleSM infinite;
+    }
+}
+
+@keyframes TextAnimationGoogleSM {
+    0% {
+        height: 60px;
+        width: 60px;
+    }
+    20% {
+        height: 80px;
+        width: 80px;
+    }
+    40% {
+        height: 60px;
+        width: 60px;
+    }
+    60% {
+        height: 100px;
+        width: 100px;
+    }
+    80% {
+        height: 70px;
+        width: 70px;
+    }
+    100% {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media(min-width:500px) {
+    .header-app {
+        display: none!important;
+        overflow: hidden!important;
+    }
+}
+
+@media(min-width:800px) {
+    .google-input-home,
+    .list-autocomplete {
+        width: 500px;
+    }
+}
+
+@media(min-width:1000px) {
+    .google-container {
+        margin-top: 150px;
+    }
+}
+
+@media(max-height: 460px) {
+    .btnGroup {
+        margin-bottom: 100px!important;
+    }
+}
+
+@media(max-width:1000px) {
+    .google-container {
+        margin-top: 100px;
+    }
+}
