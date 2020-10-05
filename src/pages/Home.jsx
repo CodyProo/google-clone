@@ -1,36 +1,22 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { Container } from "@material-ui/core";
-
 import GoogleHeaderHome from "../component/homes/GoogleHeaderHome";
 import GoogleInputHome from "../component/homes/GoogleInputHome";
 import GoogleDialogServices from "../component/homes/GoogleDialogServices";
 import AutoCompleteHomeList from "../component/homes/AutoCompleteHomeList";
-
 import axios from "axios";
-
-import { useHistory } from "react-router-dom";
-import { useStoreDispatcher } from "../hooks/useStore";
 
 const Home = () => {
   const [textSearch, changeTextSearch] = React.useState('');
-
   const [openDialog, changeOpenDialog] = React.useState(false);
-
   const [activeIndexSearch, changeActiveIndexSearch] = React.useState(0);
-
   const [focusInput, changeFocusInput] = React.useState(false);
-
   const [AutoCompleteList, changeAutoCompleteList] = React.useState([]);
-
   const handleChangeDialog = () => changeOpenDialog(prev => !prev);
-
   const onFocusInput = () => changeFocusInput(true);
-
   const onBlurInput = () => changeFocusInput(false);
-
   const history = useHistory();
-
-  const dispatcher = useStoreDispatcher();
 
   const onKeyDownInput = (event) => {
     const key = event.keyCode;
@@ -114,9 +100,7 @@ const Home = () => {
 
   const handleSearching = () => {
     if (textSearch) {
-      console.log("start searching ...");
-      history.push('/about');
-      dispatcher.useGoogleSearch(textSearch);
+      history.push(`/about/${textSearch}`);
     }
   };
 

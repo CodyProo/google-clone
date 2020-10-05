@@ -5,25 +5,23 @@ import GoogleInput from "../homes/GoogleInput";
 import AppsIcon from '@material-ui/icons/Apps';
 import GoogleDialogServices from '../homes/GoogleDialogServices';
 import { useEffect } from 'react';
-import { useStoreDispatcher } from '../../hooks/useStore';
+import { useHistory } from 'react-router-dom';
 
 const HeaderAbout = ({ valueInput }) => {
+    const history = useHistory();
     const [isFocus, changeFocus] = useState(false);
     const [value, changeValue] = useState();
     const onBlurHandler = () => changeFocus(false);
     const [openDialog, changeDialog] = useState(false);
     const onFocusHandler = () => changeFocus(true);
-    const dispatcher = useStoreDispatcher();
     const onChangeHandler = (event) => changeValue(event.target.value);
+    const handleSearching = () => history.push(`/about/${value}`);
     const onKeydownHandler = (event) => {
         if (event.keyCode === 13 && value !== "") {
-            dispatcher.useGoogleSearch(value);
+            handleSearching();
             changeFocus();
             event.target.blur();
         }
-    };
-    const handleSearching = () => {
-        dispatcher.useGoogleSearch(value);
     };
     const handleChangeDialog = () => changeDialog(prev => !prev);
 

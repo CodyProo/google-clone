@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/about/:text" component={About} />
         <Route path="/google" component={GoogleVoice} />
       </Switch>
     </Router>

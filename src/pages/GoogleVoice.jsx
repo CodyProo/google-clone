@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Box, Typography } from "@material-ui/core";
 import MicIcon from '@material-ui/icons/Mic';
-import { useStoreDispatcher } from "../hooks/useStore";
 import { useHistory } from "react-router-dom";
 
 
 const GoogleVoice = () => {
-    const dispatcher = useStoreDispatcher();
     const history = useHistory();
     const [result, setResult] = useState("Speak Now");
     const [isStart, setStart] = useState(false);
@@ -26,8 +24,7 @@ const GoogleVoice = () => {
             const result_text = e.results[0][0].transcript.toLowerCase();
             setResult(result_text);
             if (window.confirm(`Are You Sure To Search ${result_text} on The Google ???`)) {
-                dispatcher.useGoogleSearch(result_text);
-                history.push("/about");
+                history.push(`/about/${result_text}`);
             }
         } else {
             setResult("The Result not Found");
