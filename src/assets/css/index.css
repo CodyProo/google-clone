@@ -75,7 +75,6 @@
 .custom-dialog .custom-dialog-content {
     position: absolute;
     right: 5%;
-    top: 10%;
     width: 300px;
     border: 1px solid #eee;
     box-shadow: 0 0 5px 1px #eee;
@@ -387,4 +386,148 @@
     .google-container {
         margin-top: 100px;
     }
+}
+
+.google-input-after-icon .search-icons {
+    left: unset!important;
+    right: 4%!important;
+    margin-top: 0!important;
+}
+
+.google-input-after-icon .microphone-icons {
+    right: 9%!important;
+}
+
+.google-input-after-icon input {
+    width: 90%!important;
+    margin-right: auto;
+}
+
+.google-input-after-icon {
+    padding-right: 30px;
+    padding-left: 20px;
+    margin: 0;
+    width: 600px;
+}
+
+.google-about-img {
+    height: 30px;
+    object-fit: cover;
+    margin-right: 50px;
+}
+
+.icon-section {
+    margin-right: 8px;
+    font-size: 13px!important;
+    color: #5f6368;
+}
+
+.icon-section~span {
+    font-size: 13px;
+    color: #5f6368;
+    text-transform: capitalize;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-about-container {
+    border-bottom: 1px solid #eee;
+}
+
+.tab-item {
+    display: flex;
+    align-items: center;
+    min-width: 100px!important;
+}
+
+.MuiTabs-indicator {
+    background-color: #1a73e8!important;
+    height: 3px!important;
+}
+
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorInherit.tab-item.Mui-selected span,
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorInherit.tab-item.Mui-selected svg {
+    color: #1a73e8!important;
+}
+
+.About__Header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-container__padding {
+    padding-left: 160px;
+}
+
+.result-search__item {
+    margin-top: 20px;
+    width: 570px;
+}
+
+.result-search__item .link-url__caption {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202124;
+    font-size: 14px;
+    display: flex;
+}
+
+.result-search__item .link-url__caption span {
+    color: #5f6368;
+}
+
+.result-search__item .link-url__title {
+    text-decoration: none;
+    font-size: 21px;
+    color: #1a0dab;
+    height: 22px;
+    overflow: hidden;
+    display: flex;
+}
+
+.result-search__text {
+    width: 100%!important;
+    font-family: Arial, Helvetica, sans-serif!important;
+    color: #4d5156;
+    font-size: 14px!important;
+    letter-spacing: unset!important;
+}
+
+.result-search__text b {
+    font-family: 'roboto'!important;
+}
+
+.mr-1 {
+    margin-right: 4px;
+}
+
+.pagination li {
+    list-style: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #666;
+    font-family: 'roboto';
+    transition: .6s all;
+}
+
+.pagination li:hover,
+.active-page {
+    color: #888;
+    background: #ddd;
+}
+
+.cursor-icon {
+    cursor: pointer;
+}
+
+.cursor-icon:hover {
+    color: #1a73e8;
 }

@@ -1,11 +1,12 @@
-export const InitialData = { results: [], loading: false, error: false, text: '' };
+export const InitialData = { results: [], loading: false, error: false, text: '', startIndex: 0 };
 
 export const StoreReducer = (state, action) => {
     switch (action.type) {
         case "SEARCH_DATA":
             return {
                 ...state,
-                results: action.payload
+                results: action.payload,
+                startIndex: action.index
             };
         case "LOADING":
             return {

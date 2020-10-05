@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Box, Typography } from "@material-ui/core";
 import MicIcon from '@material-ui/icons/Mic';
+import { useStoreDispatcher } from "../hooks/useStore";
+import { useHistory } from "react-router-dom";
 
 
 const GoogleVoice = () => {
+    const dispatcher = useStoreDispatcher();
+    const history = useHistory();
     const [result, setResult] = useState("Speak Now");
     const [isStart, setStart] = useState(false);
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -19,10 +23,11 @@ const GoogleVoice = () => {
     speech.onend = () => setStart(false);
     speech.onresult = (e) => {
         if (e && e.results && e.results[0]) {
-            const result_text = e.results[0][0].transcript;
+            const result_text = e.results[0][0].transcript.toLowerCase();
             setResult(result_text);
             if (window.confirm(`Are You Sure To Search ${result_text} on The Google ???`)) {
-                console.log("searching");
+                dispatcher.useGoogleSearch(result_text);
+                history.push("/about");
             }
         } else {
             setResult("The Result not Found");

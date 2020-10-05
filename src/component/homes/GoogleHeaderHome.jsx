@@ -1,10 +1,10 @@
-import React from "react"
-import Title from "./Title"
+import React from "react";
+import Title from "./Title";
 import AppsIcon from '@material-ui/icons/Apps';
-import { IconButton, Avatar, Box } from "@material-ui/core"
+import { IconButton, Avatar, Box } from "@material-ui/core";
 
 const GoogleHeaderHome = ({ dialogHandler }) => {
-  return(
+  return (
     <Box display="flex" justifyContent="space-between" alignItems="center" flexDirection="row">
       <Box display="flex" flexDirection="row">
         <Title classes="mr-4 nav-text">About</Title>
@@ -20,6 +20,6 @@ const GoogleHeaderHome = ({ dialogHandler }) => {
       </Box>
     </Box>
   );
-}
+};
 
 export default GoogleHeaderHome;

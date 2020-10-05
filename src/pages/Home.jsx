@@ -145,7 +145,7 @@ const Home = () => {
           </ul>
         )}
       </GoogleInputHome>
-      <GoogleDialogServices isShow={openDialog} toggle={handleChangeDialog} />
+      <GoogleDialogServices top='10%' isShow={openDialog} toggle={handleChangeDialog} />
     </Container>
   );
 };
